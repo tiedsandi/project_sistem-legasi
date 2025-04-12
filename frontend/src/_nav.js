@@ -1,450 +1,207 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
 import {
-  cilBell,
-  cilCalculator,
-  cilChartPie,
-  cilCursor,
-  cilDescription,
-  cilDrop,
-  cilExternalLink,
-  cilNotes,
-  cilPencil,
-  cilPuzzle,
-  cilSpeedometer,
-  cilStar,
+  cilNewspaper,
+  cibItchIo,
+  cibReadTheDocs,
+  cibReadme,
+  cilAddressBook,
+  cilSettings,
 } from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import { CNavGroup, CNavItem } from '@coreui/react'
 
 const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
-  {
-    component: CNavTitle,
-    name: 'Theme',
-  },
-  {
-    component: CNavItem,
-    name: 'Colors',
-    to: '/theme/colors',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Typography',
-    to: '/theme/typography',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavTitle,
-    name: 'Components',
+    icon: <CIcon icon={cibReadTheDocs} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
-    name: 'Base',
-    to: '/base',
-    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    name: 'Legasi Kawasan',
+    to: '/legasi-kawasan',
+    icon: <CIcon icon={cibItchIo} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Accordion',
-        to: '/base/accordion',
+        name: 'Ekonomi Khusus',
+        to: '/legasi-kawasan/ekonomi-khusus',
       },
       {
         component: CNavItem,
-        name: 'Breadcrumb',
-        to: '/base/breadcrumbs',
+        name: 'Perdagangan Bebas',
+        to: '/legasi-kawasan/perdagangan-bebas',
       },
       {
         component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Calendar'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/components/calendar/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
+        name: 'Berikat',
+        to: '/legasi-kawasan/berikat',
       },
       {
         component: CNavItem,
-        name: 'Cards',
-        to: '/base/cards',
+        name: 'Industri',
+        to: '/legasi-kawasan/industri',
       },
       {
         component: CNavItem,
-        name: 'Carousel',
-        to: '/base/carousels',
+        name: 'Otorita',
+        to: '/legasi-kawasan/otorita',
       },
       {
         component: CNavItem,
-        name: 'Collapse',
-        to: '/base/collapses',
+        name: 'Angkatan Perang',
+        to: '/legasi-kawasan/angkatan-perang',
       },
       {
         component: CNavItem,
-        name: 'List group',
-        to: '/base/list-groups',
+        name: 'Cagar Alam',
+        to: '/legasi-kawasan/cagar-alam',
       },
       {
         component: CNavItem,
-        name: 'Navs & Tabs',
-        to: '/base/navs',
+        name: 'Purbakala',
+        to: '/legasi-kawasan/purbakala',
       },
       {
         component: CNavItem,
-        name: 'Pagination',
-        to: '/base/paginations',
+        name: 'Cagar Budaya',
+        to: '/legasi-kawasan/cagar-budaya',
       },
       {
         component: CNavItem,
-        name: 'Placeholders',
-        to: '/base/placeholders',
+        name: 'Taman Buru',
+        to: '/legasi-kawasan/taman-buru',
       },
       {
         component: CNavItem,
-        name: 'Popovers',
-        to: '/base/popovers',
+        name: 'Hutan Lindung',
+        to: '/legasi-kawasan/hutan-lindung',
       },
       {
         component: CNavItem,
-        name: 'Progress',
-        to: '/base/progress',
+        name: 'Hutan Konvernasi',
+        to: '/legasi-kawasan/hutan-konvervasi',
       },
       {
         component: CNavItem,
-        name: 'Smart Pagination',
-        href: 'https://coreui.io/react/docs/components/smart-pagination/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
+        name: 'Taman Laut',
+        to: '/legasi-kawasan/taman-laut',
       },
       {
-        component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Smart Table'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/components/smart-table/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
-      {
-        component: CNavItem,
-        name: 'Spinners',
-        to: '/base/spinners',
-      },
-      {
-        component: CNavItem,
-        name: 'Tables',
-        to: '/base/tables',
-      },
-      {
-        component: CNavItem,
-        name: 'Tabs',
-        to: '/base/tabs',
-      },
-      {
-        component: CNavItem,
-        name: 'Tooltips',
-        to: '/base/tooltips',
-      },
-      {
-        component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Virtual Scroller'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/components/virtual-scroller/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
+        component: CNavGroup,
+        name: '   Lainnya',
+        to: '/legasi-kawasan/lainnya',
+        items: [
+          {
+            component: CNavItem,
+            name: 'Jalur Sebidang',
+            to: '/legasi-kawasan/lainnya/jalur-sebidang',
+          },
+          {
+            component: CNavItem,
+            name: 'Perkebunan Sawit',
+            to: '/legasi-kawasan/lainnya/perkebunan-sawit',
+          },
+          {
+            component: CNavItem,
+            name: 'Pariwisata',
+            to: '/legasi-kawasan/lainnya/pariwisata',
+          },
+        ],
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Buttons',
-    to: '/buttons',
-    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    name: 'Legasi Batas Negara',
+    to: '/legasi-batas-negara',
+    icon: <CIcon icon={cilNewspaper} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Buttons',
-        to: '/buttons/buttons',
+        name: 'JBC RI - RDTL',
+        to: '/legasi-batas-negara/rdtl',
       },
       {
         component: CNavItem,
-        name: 'Buttons groups',
-        to: '/buttons/button-groups',
+        name: 'JBC RI - PNG',
+        to: '/legasi-batas-negara/png',
       },
       {
         component: CNavItem,
-        name: 'Dropdowns',
-        to: '/buttons/dropdowns',
+        name: 'BCA',
+        to: '/legasi-batas-negara/bca',
       },
       {
         component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Loading Button'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/components/loading-button/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
+        name: 'JIM',
+        to: '/legasi-batas-negara/jim',
+      },
+      {
+        component: CNavItem,
+        name: 'SOSEKMALINDO',
+        to: '/legasi-batas-negara/sosekmalindo',
+      },
+      {
+        component: CNavItem,
+        name: 'Sarana dan Prasarana',
+        to: '/legasi-batas-negara/sapras',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Forms',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+    name: 'Legasi Perkotaan',
+    to: '/legasi-perkotaan',
+    icon: <CIcon icon={cibReadme} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Form Control',
-        to: '/forms/form-control',
+        name: 'Maturasi',
+        to: '/legasi-perkotaan/maturasi',
       },
       {
         component: CNavItem,
-        name: 'Select',
-        to: '/forms/select',
+        name: 'Advokasi Penerapan PP',
+        to: '/legasi-perkotaan/advokasi',
       },
       {
         component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Multi Select'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/forms/multi-select/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
+        name: 'ASCN',
+        to: '/legasi-perkotaan/ascn',
       },
       {
         component: CNavItem,
-        name: 'Checks & Radios',
-        to: '/forms/checks-radios',
+        name: 'Perkotaan',
+        to: '/legasi-perkotaan/perkotaan',
       },
       {
         component: CNavItem,
-        name: 'Range',
-        to: '/forms/range',
-      },
-      {
-        component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Range Slider'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/forms/range-slider/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
-      {
-        component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Rating'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/forms/rating/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
-      {
-        component: CNavItem,
-        name: 'Input Group',
-        to: '/forms/input-group',
-      },
-      {
-        component: CNavItem,
-        name: 'Floating Labels',
-        to: '/forms/floating-labels',
-      },
-      {
-        component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Date Picker'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/forms/date-picker/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
-      {
-        component: CNavItem,
-        name: 'Date Range Picker',
-        href: 'https://coreui.io/react/docs/forms/date-range-picker/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
-      {
-        component: CNavItem,
-        name: (
-          <React.Fragment>
-            {'Time Picker'}
-            <CIcon icon={cilExternalLink} size="sm" className="ms-2" />
-          </React.Fragment>
-        ),
-        href: 'https://coreui.io/react/docs/forms/time-picker/',
-        badge: {
-          color: 'danger',
-          text: 'PRO',
-        },
-      },
-      {
-        component: CNavItem,
-        name: 'Layout',
-        to: '/forms/layout',
-      },
-      {
-        component: CNavItem,
-        name: 'Validation',
-        to: '/forms/validation',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Charts',
-    to: '/charts',
-    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavGroup,
-    name: 'Icons',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'CoreUI Free',
-        to: '/icons/coreui-icons',
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Flags',
-        to: '/icons/flags',
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Brands',
-        to: '/icons/brands',
+        name: 'Kerjasama',
+        to: '/legasi-perkotaan/kerjasama',
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Notifications',
-    icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
+    name: 'Legasi Pertahanan',
+    to: '/legasi-pertahanan',
+    icon: <CIcon icon={cilAddressBook} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Alerts',
-        to: '/notifications/alerts',
-      },
-      {
-        component: CNavItem,
-        name: 'Badges',
-        to: '/notifications/badges',
-      },
-      {
-        component: CNavItem,
-        name: 'Modal',
-        to: '/notifications/modals',
-      },
-      {
-        component: CNavItem,
-        name: 'Toasts',
-        to: '/notifications/toasts',
+        name: 'Laporan Pengaduan',
+        to: '/legasi-pertahanan/laporan-pengaduan',
       },
     ],
-  },
-  {
-    component: CNavItem,
-    name: 'Widgets',
-    to: '/widgets',
-    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
-  {
-    component: CNavTitle,
-    name: 'Extras',
   },
   {
     component: CNavGroup,
-    name: 'Pages',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Login',
-        to: '/login',
-      },
-      {
-        component: CNavItem,
-        name: 'Register',
-        to: '/register',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 404',
-        to: '/404',
-      },
-      {
-        component: CNavItem,
-        name: 'Error 500',
-        to: '/500',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Docs',
-    href: 'https://coreui.io/react/docs/templates/installation/',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    name: 'Setting',
+    to: '/setting',
+    icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
+    items: [],
   },
 ]
 

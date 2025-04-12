@@ -18,6 +18,7 @@ import { sygnet } from 'src/assets/brand/sygnet'
 
 // sidebar nav config
 import navigation from '../_nav'
+import { AppSidebarMenuApp } from './AppSidebarMenuApp'
 
 const AppSidebar = () => {
   const dispatch = useDispatch()
@@ -46,6 +47,7 @@ const AppSidebar = () => {
           onClick={() => dispatch({ type: 'set', sidebarShow: false })}
         />
       </CSidebarHeader>
+      <AppSidebarMenuApp />
       <AppSidebarNav items={navigation} />
       <CSidebarFooter className="border-top d-none d-lg-flex">
         <CSidebarToggler
