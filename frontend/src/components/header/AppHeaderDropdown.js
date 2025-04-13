@@ -27,10 +27,18 @@ import avatar8 from './../../assets/images/avatars/8.jpg'
 const AppHeaderDropdown = () => {
   return (
     <CDropdown variant="nav-item">
-      <CDropdownToggle placement="bottom-end" className="py-0 pe-0" caret={false}>
-        <CAvatar src={avatar8} size="md" />
+      <CDropdownToggle
+        placement="bottom-end"
+        className="py-0 pe-0 d-flex align-items-center"
+        caret={false}
+      >
+        <CAvatar src={avatar8} size="md" className="me-2" />
+        <div className="d-flex flex-column">
+          <div className="fw-semibold">Munaroh</div>
+          <div className="text-muted small">Admin</div>
+        </div>
       </CDropdownToggle>
-      <CDropdownMenu className="pt-0" placement="bottom-end">
+      {/* <CDropdownMenu className="pt-0" placement="bottom-end">
         <CDropdownHeader className="bg-body-secondary fw-semibold mb-2">Account</CDropdownHeader>
         <CDropdownItem href="#">
           <CIcon icon={cilBell} className="me-2" />
@@ -88,7 +96,7 @@ const AppHeaderDropdown = () => {
           <CIcon icon={cilLockLocked} className="me-2" />
           Lock Account
         </CDropdownItem>
-      </CDropdownMenu>
+      </CDropdownMenu> */}
     </CDropdown>
   )
 }

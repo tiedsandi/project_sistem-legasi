@@ -1,36 +1,23 @@
-import React, { useState } from 'react'
-import { CCollapse, CContainer, CNavbar, CNavbarToggler, CAvatar } from '@coreui/react'
-import avatar8 from './../assets/images/avatars/8.jpg'
+import React from 'react'
+import {
+  CDropdown,
+  CDropdownDivider,
+  CDropdownItem,
+  CDropdownMenu,
+  CDropdownToggle,
+} from '@coreui/react'
 
 export const AppSidebarMenuApp = () => {
-  const [visible, setVisible] = useState(false)
   return (
-    <>
-      <CNavbar colorScheme="dark" className="bg-dark">
-        <CContainer fluid>
-          <CNavbarToggler
-            aria-controls="navbarToggleExternalContent"
-            aria-label="Toggle navigation"
-            onClick={() => setVisible(!visible)}
-            style={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '4px',
-            }}
-          >
-            <CAvatar src={avatar8} size="md" /> Subdit Perkotaan
-          </CNavbarToggler>
-        </CContainer>
-      </CNavbar>
-
-      <CCollapse id="navbarToggleExternalContent" visible={visible} data-coreui-theme="dark">
-        <div className="bg-dark p-4">
-          <h5 className="text-body-emphasis h4">Collapsed content</h5>
-          <span className="text-body-secondary">Toggleable via the navbar brand.</span>
-        </div>
-      </CCollapse>
-    </>
+    <CDropdown variant="btn-group" className="m-2">
+      <CDropdownToggle color="secondary">Centered dropdown</CDropdownToggle>
+      <CDropdownMenu style={{ width: '100%' }}>
+        <CDropdownItem href="#">Action</CDropdownItem>
+        <CDropdownItem href="#">Another action</CDropdownItem>
+        <CDropdownItem href="#">Something else here</CDropdownItem>
+        <CDropdownDivider />
+        <CDropdownItem href="#">Separated link</CDropdownItem>
+      </CDropdownMenu>
+    </CDropdown>
   )
 }
