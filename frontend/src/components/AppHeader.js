@@ -40,7 +40,7 @@ const AppHeader = () => {
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
 
-        <CForm>
+        <CForm className="d-none d-md-block px-4 m-2">
           <CInputGroup className="">
             <CInputGroupText>
               <CIcon icon={cilSearch} />
@@ -67,6 +67,15 @@ const AppHeader = () => {
           <AppHeaderDropdown />
         </CHeaderNav>
       </CContainer>
+
+      <CForm className="d-md-none px-4 m-2" style={{ width: '100%' }}>
+        <CInputGroup>
+          <CInputGroupText>
+            <CIcon icon={cilSearch} />
+          </CInputGroupText>
+          <CFormInput type="text" placeholder="Cari..." />
+        </CInputGroup>
+      </CForm>
     </CHeader>
   )
 }
