@@ -16,6 +16,8 @@ import { AppSidebarNav } from './AppSidebarNav'
 import navigation from '../_nav'
 import { AppSidebarMenuApp } from './AppSidebarMenuApp'
 
+import avatar8 from './../assets/images/avatars/8.jpg'
+
 const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
@@ -32,8 +34,14 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarHeader className="border-bottom">
-        <CSidebarBrand to="/">SISTEM LEGASI WASKORBAN</CSidebarBrand>
+      <CSidebarHeader className="border-bottom d-flex align-items-center justify-content-center">
+        <CSidebarBrand to="/" className="d-flex align-items-center text-decoration-none">
+          <img src={avatar8} alt="Logo" style={{ height: '40px', marginRight: '10px' }} />
+          <div style={{ lineHeight: '1.2' }}>
+            <span style={{ fontWeight: 'bold' }}>SISTEM LEGASI</span> <br />
+            <span>WASKOBAN</span>
+          </div>
+        </CSidebarBrand>
         <CCloseButton
           className="d-lg-none"
           dark

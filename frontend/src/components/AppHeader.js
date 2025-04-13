@@ -9,6 +9,8 @@ import {
   CNavItem,
   CForm,
   CFormInput,
+  CInputGroup,
+  CInputGroupText,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilBell, cilList, cilMenu, cilSearch } from '@coreui/icons'
@@ -38,8 +40,13 @@ const AppHeader = () => {
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
 
-        <CForm className="d-flex">
-          <CFormInput type="search" className="me-2" placeholder="Cari..." />
+        <CForm>
+          <CInputGroup className="">
+            <CInputGroupText>
+              <CIcon icon={cilSearch} />
+            </CInputGroupText>
+            <CFormInput type="text" placeholder="Cari..." />
+          </CInputGroup>
         </CForm>
 
         <CHeaderNav className="ms-auto">

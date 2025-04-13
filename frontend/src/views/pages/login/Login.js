@@ -1,84 +1,56 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import {
-  CButton,
-  CCard,
-  CCardBody,
-  CCardGroup,
-  CCol,
-  CContainer,
-  CForm,
-  CFormInput,
-  CInputGroup,
-  CInputGroupText,
-  CRow,
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import { cilLockLocked, cilUser } from '@coreui/icons'
+import { CButton, CCol, CContainer, CForm, CFormInput, CInputGroup, CRow } from '@coreui/react'
 
 const Login = () => {
   return (
-    <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
-      <CContainer>
-        <CRow className="justify-content-center">
-          <CCol md={8}>
-            <CCardGroup>
-              <CCard className="p-4">
-                <CCardBody>
-                  <CForm>
-                    <h1>Login</h1>
-                    <p className="text-body-secondary">Sign In to your account</p>
-                    <CInputGroup className="mb-3">
-                      <CInputGroupText>
-                        <CIcon icon={cilUser} />
-                      </CInputGroupText>
-                      <CFormInput placeholder="Username" autoComplete="username" />
-                    </CInputGroup>
-                    <CInputGroup className="mb-4">
-                      <CInputGroupText>
-                        <CIcon icon={cilLockLocked} />
-                      </CInputGroupText>
-                      <CFormInput
-                        type="password"
-                        placeholder="Password"
-                        autoComplete="current-password"
-                      />
-                    </CInputGroup>
-                    <CRow>
-                      <CCol xs={6}>
-                        <CButton color="primary" className="px-4">
-                          Login
-                        </CButton>
-                      </CCol>
-                      <CCol xs={6} className="text-right">
-                        <CButton color="link" className="px-0">
-                          Forgot password?
-                        </CButton>
-                      </CCol>
-                    </CRow>
-                  </CForm>
-                </CCardBody>
-              </CCard>
-              <CCard className="text-white bg-primary py-5" style={{ width: '44%' }}>
-                <CCardBody className="text-center">
-                  <div>
-                    <h2>Sign up</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <Link to="/register">
-                      <CButton color="primary" className="mt-3" active tabIndex={-1}>
-                        Register Now!
+    <div className="min-vh-100 d-flex">
+      {/* Bagian Kiri */}
+      <CCol
+        className="d-none d-md-flex bg-primary text-white align-items-center justify-content-center"
+        style={{ flex: 1 }}
+      >
+        <div className="text-center">
+          <h1>Selamat Datang Kembali!</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing..</p>
+        </div>
+      </CCol>
+
+      {/* Bagian Kanan */}
+      <CCol className="d-flex align-items-center justify-content-center" style={{ flex: 2 }}>
+        <CContainer>
+          <CRow className="justify-content-center">
+            <CCol md={4}>
+              <div>
+                <CForm>
+                  <h1>Masuk</h1>
+                  <CInputGroup className="mb-3">
+                    <CFormInput type="email" placeholder="Email" autoComplete="email" />
+                  </CInputGroup>
+                  <CInputGroup className="mb-4">
+                    <CFormInput
+                      type="password"
+                      placeholder="Password"
+                      autoComplete="current-password"
+                    />
+                  </CInputGroup>
+                  <CRow>
+                    <CCol xs={12} className="text-right">
+                      <CButton color="link" className="px-0">
+                        Lupa Password?
                       </CButton>
-                    </Link>
-                  </div>
-                </CCardBody>
-              </CCard>
-            </CCardGroup>
-          </CCol>
-        </CRow>
-      </CContainer>
+                    </CCol>
+                    <CCol xs={12}>
+                      <CButton color="primary" className="px-4" style={{ width: '100%' }}>
+                        Login
+                      </CButton>
+                    </CCol>
+                  </CRow>
+                </CForm>
+              </div>
+            </CCol>
+          </CRow>
+        </CContainer>
+      </CCol>
     </div>
   )
 }
